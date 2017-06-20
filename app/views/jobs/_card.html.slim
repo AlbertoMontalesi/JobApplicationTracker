@@ -50,8 +50,7 @@
       - if job.notes.nil?
         span Take a note
       - else
-        job.notes.each do |note|
-          = note  
+        = job.notes
       br
       = form_for job, url: job_path(job), method: :patch do |jj|
         = jj.hidden_field :id

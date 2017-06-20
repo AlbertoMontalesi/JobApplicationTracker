@@ -1,6 +1,6 @@
 class JobsController < ApplicationController
   def index
-    @jobs = Job.all
+    @jobs = Job.all.order(created_at: :desc)
     # @job= Job.find params[:id]
   end
 
@@ -22,7 +22,7 @@ class JobsController < ApplicationController
   end
 
   def update
-    @job = Job.find params[:id]
+    @job = Job.find(params[:id])
     if @job.update_attributes(job_params)
       redirect_to root_path 
     else
