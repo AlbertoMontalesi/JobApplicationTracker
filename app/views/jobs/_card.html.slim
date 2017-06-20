@@ -1,32 +1,38 @@
 .card
   .card-content
     .card-title
-      b = job.role
-      |  at 
-      b = job.company 
+        b = job.role
+        |  at 
+        b = job.company
+        
     p 
-      | Website: 
-      = job.link
+      = job.application_date.strftime("Applied on %d/%m/%Y ") 
+      b = job.application_closing_date.strftime("|| Closing on %d/%m/%Y")
+      
+      
       
   .card-tabs
     ul.tabs.tabs-fixed-width
       li.tab
-        a[href="#test4"]
+        a[href="#test#{job.id.to_s}#{'a'}"]
           | Description
       li.tab
-        a.active[href="#test5"]
+        a[href="#test#{job.id.to_s}#{'b'}"]
           | Contacts
       li.tab
-        a[href="#test6"]
-          | Test 3
+        a[href="#test#{job.id.to_s}#{'c'}"]
+          | More Info
   .card-content.grey.lighten-4
-    #test4
+    div[id="test#{job.id.to_s}#{'a'}"]
       | I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.
-    #test5
+    div[id="test#{job.id.to_s}#{'b'}"]
       = job.contact_name
       br 
       = job.contact_email
       br
       = job.contact_phone
-    #test6
-      | Test 3
+    div[id="test#{job.id.to_s}#{'c'}"]
+      p 
+      | Link: #{job.link}       
+      br
+      | Salary: #{job.salary}
