@@ -29,6 +29,7 @@
         a[href="#test#{job.id.to_s}#{'c'}"]
           | Notes
   .card-content.grey.lighten-4
+
     div[id="test#{job.id.to_s}#{'a'}"]
       p 
       | Link: #{job.link}       
@@ -37,11 +38,23 @@
       br
       | Description:
       | I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.
+
     div[id="test#{job.id.to_s}#{'b'}"]
       = job.contact_name
       br 
       = job.contact_email
       br
       = job.contact_phone
+
     div[id="test#{job.id.to_s}#{'c'}"]
-      
+      - if job.notes.nil?
+        span Take a note
+      - else
+        job.notes.each do |note|
+          = note  
+      br
+      = form_for job, url: job_path(job), method: :patch do |jj|
+        = jj.hidden_field :id
+        = jj.label :notes
+        = jj.text_area :notes
+        = jj.submit "Update"
