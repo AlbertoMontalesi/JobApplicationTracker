@@ -1,9 +1,15 @@
 .card
   .card-content
     .card-title
-        b = job.role
-        |  at 
-        b = job.company
+      .row
+        .col.s12.m6
+            b = job.role
+            |  at 
+            b = job.company
+        .col.s12.m6
+            = job.response
+            || 
+            = job.interview_stage
         
     p 
       = job.application_date.strftime("Applied on %d/%m/%Y ") 
@@ -21,9 +27,15 @@
           | Contacts
       li.tab
         a[href="#test#{job.id.to_s}#{'c'}"]
-          | More Info
+          | Notes
   .card-content.grey.lighten-4
     div[id="test#{job.id.to_s}#{'a'}"]
+      p 
+      | Link: #{job.link}       
+      br
+      | Salary: #{job.salary}
+      br
+      | Description:
       | I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.
     div[id="test#{job.id.to_s}#{'b'}"]
       = job.contact_name
@@ -32,7 +44,4 @@
       br
       = job.contact_phone
     div[id="test#{job.id.to_s}#{'c'}"]
-      p 
-      | Link: #{job.link}       
-      br
-      | Salary: #{job.salary}
+      
