@@ -6,9 +6,4 @@ br
 
 .row
   - @jobs.each do |j|
-    .col.s12
-      .card
-        .card-content
-          span = j.role
-          span = j.company
-   
+    = render partial: 'jobs/card', locals: {job:j}

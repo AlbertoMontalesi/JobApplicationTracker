@@ -1,0 +1,32 @@
+.card
+  .card-content
+    .card-title
+      b = job.role
+      |  at 
+      b = job.company 
+    p 
+      | Website: 
+      = job.link
+      
+  .card-tabs
+    ul.tabs.tabs-fixed-width
+      li.tab
+        a[href="#test4"]
+          | Description
+      li.tab
+        a.active[href="#test5"]
+          | Contacts
+      li.tab
+        a[href="#test6"]
+          | Test 3
+  .card-content.grey.lighten-4
+    #test4
+      | I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.
+    #test5
+      = job.contact_name
+      br 
+      = job.contact_email
+      br
+      = job.contact_phone
+    #test6
+      | Test 3
