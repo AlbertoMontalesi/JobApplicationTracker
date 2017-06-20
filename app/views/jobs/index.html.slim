@@ -1,0 +1,10 @@
+h1 Index Jobs
+
+= link_to "add new jobs", new_job_path
+
+br
+
+- @jobs.each do |j|
+  = j.company
+  br
+  = j.role

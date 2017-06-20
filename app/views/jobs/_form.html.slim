@@ -1,0 +1,14 @@
+
+.row
+  = form_for @job, html: {class: "col s12"} do |f|
+    .input_field
+      = f.label :company
+      = f.text_field :company
+    .input_field
+      = f.label :role
+      = f.text_field :role
+    .input_field
+      = f.label :link
+      = f.text_field :link
+    .input_field
+      = f.submit
