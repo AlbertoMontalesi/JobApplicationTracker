@@ -5,5 +5,5 @@ class Job < ApplicationRecord
   enum interview_stage: { no_interview:0, phone_interview:1, first_face_interview:2, second_face_interview:3, concluded:4
     }
 
-  validates :company, :role, presence: true
+  validates :company, :role, :application_date,presence: true
 end

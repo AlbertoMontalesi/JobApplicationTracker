@@ -4,7 +4,11 @@ h1 Index Jobs
 
 br
 
-- @jobs.each do |j|
-  = j.company
-  br
-  = j.role
+.row
+  - @jobs.each do |j|
+    .col.s12
+      .card
+        .card-content
+          span = j.role
+          span = j.company
+   

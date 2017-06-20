@@ -1,4 +1,4 @@
-
+h1 Add a new job application
 .row
   = form_for @job, html: {class: "col s12"} do |f|
     .input_field
@@ -11,4 +11,28 @@
       = f.label :link
       = f.text_field :link
     .input_field
-      = f.submit
+      = f.label :salary
+      = f.number_field :salary
+    .row
+      .input_field.col.s12.m6
+        = f.label :application_date
+        = f.date_field :application_date, class:'datepicker'
+      .input_field.col.s12.m6
+        = f.label :application_closing_date
+        = f.date_field :application_closing_date, class:'datepicker'
+    .input_field
+      = f.label :description
+      = f.text_area :description
+    h2 Contacts
+    .row
+      .input_field.col.s12.m4
+        = f.label :contact_name
+        = f.text_field :contact_name
+      .input_field.col.s12.m4
+        = f.label :contact_email
+        = f.email_field :contact_email
+      .input_field.col.s12.m4
+        = f.label :contact_phone
+        = f.phone_field :contact_phone
+      .input_field
+        = f.submit "Submit", class:'btn'
