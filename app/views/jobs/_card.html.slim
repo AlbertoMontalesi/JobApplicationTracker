@@ -49,11 +49,10 @@
     div[id="test#{job.id.to_s}#{'c'}"]
       - if job.notes.nil?
         span Take a note
-      - else
-        = job.notes
+      i.fa.fa-pencil-square-o aria-hidden="true" 
       br
-      = form_for job, url: job_path(job), method: :patch do |jj|
+      = form_for job, url: job_path(job), remote: true,method: :patch do |jj|
         = jj.hidden_field :id
         = jj.label :notes
-        = jj.text_area :notes
-        = jj.submit "Update"
+        = jj.text_area :notes, :readonly => true
+        = jj.submit "Update", class:'hide'
