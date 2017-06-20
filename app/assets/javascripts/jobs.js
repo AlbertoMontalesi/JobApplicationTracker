@@ -1,6 +1,8 @@
-var ready;
-ready = function () {
 
+var ready;
+
+ready = function () {
+  $('select').material_select();
 // target the pen icon
   $('.fa-pencil-square-o').on('click', function () {
     // if the submit button has the class hide

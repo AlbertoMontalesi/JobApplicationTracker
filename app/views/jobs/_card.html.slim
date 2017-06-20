@@ -7,9 +7,12 @@
             |  at 
             b = job.company
         .col.s12.m6
-            = job.response
-            || 
-            = job.interview_stage
+            = form_for job, url: job_path(job), remote: true,method: :patch do |jj|
+              = jj.select :response, Job.responses.keys
+              = jj.select :interview_stage, Job.interview_stages.keys
+              = jj.submit "Update", class:'btn'
+
+             
         
     p 
       = job.application_date.strftime("Applied on %d/%m/%Y ") 
@@ -55,4 +58,4 @@
         = jj.hidden_field :id
         = jj.label :notes
         = jj.text_area :notes, :readonly => true
-        = jj.submit "Update", class:'hide'
+        = jj.submit "Update", class:'hide btn'
