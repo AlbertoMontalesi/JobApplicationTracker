@@ -1,0 +1,5 @@
+= form_for job, url: job_path(job), remote: true,method: :patch do |jj|
+              = jj.select :response, Job.responses.keys
+              - if job.response === 'interview'
+                = jj.select :interview_stage, Job.interview_stages.keys
+              = jj.submit "Update", class:'btn'

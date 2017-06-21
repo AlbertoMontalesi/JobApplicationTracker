@@ -7,10 +7,7 @@
             |  at 
             b = job.company
         .col.s12.m6
-            = form_for job, url: job_path(job), remote: true,method: :patch do |jj|
-              = jj.select :response, Job.responses.keys
-              = jj.select :interview_stage, Job.interview_stages.keys
-              = jj.submit "Update", class:'btn'
+             = render partial: 'jobs/select_response', locals: {job:job}
 
              
         

@@ -6,4 +6,5 @@ br
 
 .row
   - @jobs.each do |j|
-    = render partial: 'jobs/card', locals: {job:j}
+    .row.job-cards
+      = render partial: 'jobs/card', locals: {job:j}
