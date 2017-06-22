@@ -6,7 +6,7 @@ nav.green.accent-3
     ul.right.hide-on-med-and-down
       - if user_signed_in?
         li 
-          = link_to "Log Out", destroy_user_session_path
+          = link_to "Log Out", destroy_user_session_path, method: :delete
       - else
         li
           = link_to "Register", new_user_registration_path
@@ -15,7 +15,7 @@ nav.green.accent-3
     ul#mobile-demo.side-nav
       - if user_signed_in?
         li 
-          = link_to "Log Out", destroy_user_session_path
+          = link_to "Log Out", destroy_user_session_path, method: :delete
       - else
         li
           = link_to "Register", new_user_registration_path
