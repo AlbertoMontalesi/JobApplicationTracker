@@ -2,8 +2,8 @@ class JobsController < ApplicationController
   respond_to :html, :js, :json
 
   def index
-    @jobs = Job.all.order(created_at: :desc)
-    # @job= Job.find params[:id]
+    @q = Job.ransack(params[:q])
+    @jobs = @q.result.order(created_at: :desc)
     respond_to do |format|
       format.js
       format.html

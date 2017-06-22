@@ -10,7 +10,7 @@ ready = function () {
 ////////////
   // TO TOGGLE ON AND OFF THE EDIT NOTES
 // target the pen icon
-  $('.fa-pencil-square-o').on('click', function () {
+  $('.note-edit').on('click', function () {
     // if the submit button has the class hide
     if ($(this).parent().find('input[type="submit"]').hasClass('hide')) {
       // remove the class hide 
