@@ -7,24 +7,13 @@ br
 br
 .row
   = render 'jobs/search_form'
+// create ransack form for responses and interviews
 
-.row
-  .col
-    a.dropdown-button.btn data-activates="dropdown1" href="#" Responses
-    ul#dropdown1.dropdown-content
-      - Job.responses.keys.each do |response|
-          li
-            a href='#!' #{response}
-  .col
-    a.dropdown-button.btn data-activates="dropdown2" href="#" Interview stages
-    ul#dropdown2.dropdown-content
-      - Job.interview_stages.keys.each do |interview|
-          li
-            a href='#!' #{interview}
+
+
 
 .row
   - @jobs.each do |j|
     .row.job-cards
       = render partial: 'jobs/card', locals: {job:j}
-
 
