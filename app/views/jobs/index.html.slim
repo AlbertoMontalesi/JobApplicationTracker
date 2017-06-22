@@ -1,17 +1,18 @@
-h1 Index Jobs
+h1 Your Job Applications
 
-= link_to "add new jobs", new_job_path 
-
-
+.fixed-action-btn
+  .btn-floating.btn-large.red
+    a href='/jobs/new'
+      i.material-icons add
 br
 br
 br
-.row
-  = render 'jobs/search_form'
+.card
+  .card-content
+    = render 'jobs/search_form'
 // create ransack form for responses and interviews
 
-.row
-  - @jobs.each do |j|
-    .row.job-cards
-      = render partial: 'jobs/card', locals: {job:j}
+- @jobs.each do |j|
+  .job-cards
+    = render partial: 'jobs/card', locals: {job:j}
 

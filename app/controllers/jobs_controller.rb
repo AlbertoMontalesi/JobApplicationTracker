@@ -33,7 +33,9 @@ class JobsController < ApplicationController
       format.js
       format.html
     end
-    redirect_to root_path unless @job.update_attributes(job_params)
+    if @job.update_attributes(job_params) 
+      render index
+    end
   end
 
 ## used to change the pin value

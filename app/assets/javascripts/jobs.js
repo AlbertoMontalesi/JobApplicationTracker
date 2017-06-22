@@ -28,7 +28,6 @@ ready = function () {
 
 } // end ready 
 
-$.turbo.isReady
 $(document).ready(ready);
 $(document).on("page:load", ready);
 

@@ -1,64 +1,67 @@
-.card
-  = render partial: 'jobs/pin_icon', locals: {job:job}
+.row
+  .card
+    .pin-form
+      = render partial: 'jobs/pin_icon', locals: {job:job}
 
 
-  .card-content
-    .card-title
-      .row
-        .col.s12.m6
-            
-            b = job.role
-            |  at 
-            b = job.company
-        .col.s12.m6.form-response
-             = render partial: 'jobs/select_response', locals: {job:job}
+    .card-content
+      .card-title
+        .row
+          .col.s12.m6
+              
+              b = job.role
+              |  at 
+              b = job.company
+          .col.s12.m6.form-response
+              = render partial: 'jobs/select_response', locals: {job:job}
 
-             
-    p 
-      = job.application_date.strftime("Applied on %d/%m/%Y ") 
-      b = job.application_closing_date.strftime("|| Closing on %d/%m/%Y")
-      
-      
-      
-  .card-tabs
-    ul.tabs.tabs-fixed-width
-      li.tab
-        a[href="#test#{job.id.to_s}#{'a'}"]
-          | Description
-      li.tab
-        a[href="#test#{job.id.to_s}#{'b'}"]
-          | Contacts
-      li.tab
-        a[href="#test#{job.id.to_s}#{'c'}"]
-          | Notes
-  .card-content.grey.lighten-4
-
-    div[id="test#{job.id.to_s}#{'a'}"]
+              
       p 
-      | Link: #{job.link}       
-      br
-      | Salary: #{job.salary}
-      br
-      | Description:
-      | I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.
+        = job.application_date.strftime("Applied on %d/%m/%Y ") 
+        b = job.application_closing_date.strftime("|| Closing on %d/%m/%Y")
+        
+        
+        
+    .card-tabs
+      ul.tabs.tabs-fixed-width
+        li.tab
+          a[href="#test#{job.id.to_s}#{'a'}"]
+            | Description
+        li.tab
+          a[href="#test#{job.id.to_s}#{'b'}"]
+            | Contacts
+        li.tab
+          a[href="#test#{job.id.to_s}#{'c'}"]
+            | Notes
+    .card-content.grey.lighten-4
 
-    div[id="test#{job.id.to_s}#{'b'}"]
-      = job.contact_name
-      br 
-      = job.contact_email
-      br
-      = job.contact_phone
+      div[id="test#{job.id.to_s}#{'a'}"]
+        p 
+          b Link: 
+          = job.link       
+        br
+          b Salary: 
+          = job.salary 
+        br
+          b Description: 
+          = job.description
 
-    div[id="test#{job.id.to_s}#{'c'}"]
-      - if job.notes.nil?
-        span Take a note
+      div[id="test#{job.id.to_s}#{'b'}"]
+        = job.contact_name
+        br 
+        = job.contact_email
+        br
+        = job.contact_phone
+
+      div[id="test#{job.id.to_s}#{'c'}"]
+        
         // if you rename the class remember to change in the jobs.js
-      a.btn-floating.btn-small.red.note-edit
-        i.small.material-icons mode_edit
-      br
-      = form_for job, url: job_path(job), remote: true,method: :patch do |jj|
-        = jj.hidden_field :id
-        = jj.label :notes
-        = jj.text_area :notes, :readonly => true
-        = jj.submit "Update", class:'hide btn'
+        a.btn-floating.btn-small.red.note-edit.right-align
+          i.small.material-icons mode_edit
+        br
+        = form_for job, url: job_path(job), remote: true,method: :patch do |jj|
+          = jj.hidden_field :id
+          = jj.label :notes
+          = jj.text_area :notes, :readonly => true
+          = jj.submit "Update", class:'hide btn'
 
