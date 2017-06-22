@@ -1,10 +1,13 @@
 class JobsController < ApplicationController
   respond_to :html, :js, :json
-  
+
   def index
     @jobs = Job.all.order(created_at: :desc)
     # @job= Job.find params[:id]
-    
+    respond_to do |format|
+      format.js
+      format.html
+    end
   end
 
   def new
@@ -26,20 +29,16 @@ class JobsController < ApplicationController
 
   def update
     @job = Job.find(params[:id])
-    respond_to do |format|               
+    respond_to do |format|
       format.js
-    end 
-    unless @job.update_attributes(job_params)
-      redirect_to root_path
+      format.html
     end
-
+    redirect_to root_path unless @job.update_attributes(job_params)
   end
 
   private
 
   # unless the user selects interview stage we automatically set the interview stage so it wont display
- 
-
 
   def job_params
     params.require(:job).permit(:company, :role, :salary, :application_date, :application_closing_date, :contact_name, :contact_email, :contact_phone, :description, :link, :response, :interview_stage, :notes)

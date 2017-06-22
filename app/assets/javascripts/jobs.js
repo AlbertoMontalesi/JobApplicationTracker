@@ -1,8 +1,14 @@
 
 var ready;
-
 ready = function () {
+
+////////////////
+// TO DISPLAY MATERIALIZE SELECTS
+//////////
   $('select').material_select();
+ 
+////////////
+  // TO TOGGLE ON AND OFF THE EDIT NOTES
 // target the pen icon
   $('.fa-pencil-square-o').on('click', function () {
     // if the submit button has the class hide
@@ -17,12 +23,14 @@ ready = function () {
        $(this).parent().find('textarea').addAttr('readonly');
       
     } //end if else
-
   }); // end toggle function
+
+
 } // end ready 
 
-
+$.turbo.isReady
 $(document).ready(ready);
 $(document).on("page:load", ready);
+
 
 
