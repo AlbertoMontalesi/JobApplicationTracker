@@ -1,18 +1,19 @@
-h1 Your Job Applications
+.container
+  h1 Your Job Applications
 
-.fixed-action-btn
-  .btn-floating.btn-large.red
-    a href='/jobs/new'
-      i.material-icons add
-br
-br
-br
-.card
-  .card-content
-    = render 'jobs/search_form'
-// create ransack form for responses and interviews
+  .fixed-action-btn
+    .btn-floating.btn-large.red
+      a href='/jobs/new'
+        i.material-icons add
+  br
+  br
+  br
+  .card
+    .card-content
+      = render 'jobs/search_form'
+  // create ransack form for responses and interviews
 
-- @jobs.each do |j|
-  .job-cards
-    = render partial: 'jobs/card', locals: {job:j}
+  - @jobs.each do |j|
+    .job-cards
+      = render partial: 'jobs/card', locals: {job:j}
 

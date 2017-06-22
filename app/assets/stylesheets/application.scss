@@ -1,10 +1,71 @@
 @import "materialize/components/color";
 // override the default colors here*
+
+
+
+
+
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
 @import "materialize";
 
 
 
-.fa {
-  cursor: pointer;
+.field label {
+  font-size: 1.5rem;
 }
+
+
+/* NAVBAR */
+#mobile-demo li {
+  font-size: 3rem;
+}
+
+nav {
+  height: 7vh;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+
+/*=============================================
+=            HOMEPAge            =
+=============================================*/
+#homepage {
+  height: 93vh;
+  overflow: hidden;
+  background: url('forest.jpg');
+  background-size: cover;
+  background-position: center;
+}
+#overlay {
+  height: 100%;
+  width: 100%;
+  background-color: transparentize(black,0.6);
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  padding-left: 5vw;
+}
+
+#left {
+  background-color: transparentize(white,0.5);
+  padding: 2vh;
+}
+#left, #right {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+}
+#left div a {
+  margin-right: 2vw;
+}
+#right img {
+  width: 30vw;
+  max-width: 300px;
+  max-height: 500px;
+  margin: auto;
+}
+
+
+/*=====  End of HOMEPAge  ======*/
+
