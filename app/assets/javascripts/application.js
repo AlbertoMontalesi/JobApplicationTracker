@@ -18,6 +18,8 @@
 //= require materialize-sprockets
 //= require turbolinks
 //= require turbolinks-compatibility
-//= require_tree
-
-
+//= require jobs
+//= require navbar
+//= require pin
+//= require response
+//= require serviceworker-companion
