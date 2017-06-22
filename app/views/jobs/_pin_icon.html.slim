@@ -1,0 +1,9 @@
+= form_for job, url: job_path(job), method: :put do |pin|
+    - if job.pin === false
+      .btn-floating.halfway-fab.btn-large.waves-effect.waves-light.red
+        = pin.hidden_field :pin, :value => 'true'
+        = pin.submit "+", class:'material-icons.large'
+    - else
+      .btn-floating.halfway-fab.btn-large.waves-effect.waves-light.blue
+        = pin.hidden_field :pin, :value => 'false'
+        = pin.submit "-", class:'material-icons.large'

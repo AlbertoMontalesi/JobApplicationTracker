@@ -3,7 +3,7 @@ class JobsController < ApplicationController
 
   def index
     @q = Job.ransack(params[:q])
-    @jobs = @q.result.order(created_at: :desc)
+    @jobs = @q.result.order(pin: :desc,created_at: :desc)
     respond_to do |format|
       format.js
       format.html
@@ -36,11 +36,13 @@ class JobsController < ApplicationController
     redirect_to root_path unless @job.update_attributes(job_params)
   end
 
+## used to change the pin value
+
   private
 
   # unless the user selects interview stage we automatically set the interview stage so it wont display
 
   def job_params
-    params.require(:job).permit(:company, :role, :salary, :application_date, :application_closing_date, :contact_name, :contact_email, :contact_phone, :description, :link, :response, :interview_stage, :notes)
+    params.require(:job).permit(:company, :role, :salary, :application_date, :application_closing_date, :contact_name, :contact_email, :contact_phone, :description, :link, :response, :interview_stage, :notes, :pin)
   end
 end

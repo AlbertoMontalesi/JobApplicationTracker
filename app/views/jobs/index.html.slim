@@ -1,6 +1,7 @@
 h1 Index Jobs
 
-= link_to "add new jobs", new_job_path
+= link_to "add new jobs", new_job_path 
+
 
 br
 br
@@ -8,9 +9,6 @@ br
 .row
   = render 'jobs/search_form'
 // create ransack form for responses and interviews
-
-
-
 
 .row
   - @jobs.each do |j|
