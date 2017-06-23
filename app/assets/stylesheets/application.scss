@@ -172,16 +172,17 @@ nav {
       margin-bottom: 2vh;
     }
     * {
-      font-size: 2.5rem !important;
-    }
-  }
+      font-size: 3.5rem !important;
+    } 
+  } // end breakpoint
   .btn {
-    padding: 1% 3% !important;
+    padding: 2% 4% !important;
     box-sizing: border-box;
     width: auto;
     height: auto;
   }
-}
+} 
+
 
 
 /*=====  End of SEARCH FORMS  ======*/
@@ -230,29 +231,52 @@ nav {
 #job-card {
   @media #{$medium-and-down} {
     .card-title {
-      font-size: 3rem !important;
+      font-size: 3.5rem !important;
+      
+      .col,.form-response {
+        margin-bottom: 1.5vh !important;
+        line-height: 4rem;
+      } .btn-response {
+        margin-top: 1vh !important;
+      }
     }
     .form-response {
-      font-size: 3rem !important;
+      font-size: 3.5rem !important;
     }
     .edit_job * {
-      font-size: 2.5rem !important;
+      font-size: 3rem !important;
     }
     .select-wrapper {
       margin-top: 2vh;
     }
     p {
-      font-size: 1.5rem;
-    }
-    .btn:not(.pin-icon, .card-description btn) {
-      padding: 1% 3% !important;
+      font-size: 2rem;
+    }.btn:not(.pin-icon):not(.collapse-icon) {
+      padding: 2% 4% !important;
       box-sizing: border-box;
       width: auto;
       height: auto;
-    }.card-tabs * {
-      font-size: 2.5rem !important;
+    }
+   // style the two buttons
+    .pin-icon, .collapse-icon {
+      width: 10vw !important;
+      height: 10vw !important ;
+    }
+    .pin-icon i, .collapse-icon i {
+      font-size: 3rem !important;
+    }
+    .collapse-icon {
+      display: flex;
+      flex-direction: row;
+    }
+    .collapse-icon i {
+      margin: auto;
+    }
+    
+    .card-tabs * {
+      font-size: 3rem !important;
     }.card-description * {
-      font-size: 1.5rem;
+      font-size: 2rem;
     }
   } // end breakpoint
 }
@@ -291,3 +315,30 @@ nav {
 
 
 /*=====  End of USER FORMS  ======*/
+
+
+
+/*=============================================
+=            INDEX PAGE            =
+=============================================*/
+.new-icon {
+   @media #{$medium-and-down} {
+    width: 12vw !important;
+      height: 12vw !important ;
+      display: flex;
+      flex-direction: row;
+
+      a {
+        margin: auto;
+      }
+      i {
+        font-size: 4rem !important;
+        
+      }
+   } // end breakpoint 
+
+}
+
+
+/*=====  End of INDEX PAGE  ======*/
+

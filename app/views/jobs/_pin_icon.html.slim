@@ -1,10 +1,10 @@
 = form_for job, url: job_path(job), method: :put, remote: true do |pin|
     - if job.pin === false
         = pin.hidden_field :pin, :value => 'true'
-        = button_tag type: 'submit', class: 'btn btn-floating pin-icon' do
-          i.material-icons.secondary-bg-color label_outline
+        = button_tag type: 'submit', class: 'btn btn-floating pin-icon secondary-bg-color' do
+          i.material-icons label_outline
     - else
         = pin.hidden_field :pin, :value => 'false'
-        = button_tag type: 'submit', class: 'btn btn-floating pin-icon' do
-          i.material-icons.main-bg-color label_outline
+        = button_tag type: 'submit', class: 'btn btn-floating pin-icon main-bg-color' do
+          i.material-icons label_outline
 

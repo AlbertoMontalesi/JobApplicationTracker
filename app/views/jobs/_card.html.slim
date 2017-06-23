@@ -1,4 +1,4 @@
-.row.jobs#job-card
+.row#job-card
   .card
     .pin-form
       = render partial: 'jobs/pin_icon', locals: {job:job}
@@ -16,8 +16,8 @@
       p 
         = job.application_date.strftime("Applied on %d/%m/%Y ") 
         b = job.application_closing_date.strftime("|| Closing on %d/%m/%Y")
-      a.btn-floating.halfway-fab.waves-effect.waves-light
-        i.small.material-icons.icon-collapse add
+      a.btn-floating.halfway-fab.waves-effect.waves-light.collapse-icon
+        i.material-icons.icon-collapse add
         
         
     // by default hide it to make the card more compact    
