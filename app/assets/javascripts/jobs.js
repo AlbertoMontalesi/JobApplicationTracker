@@ -41,12 +41,15 @@ ready = function () {
       $(this).closest('.card').find('.card-description').addClass('hide');
       $(this).html('add');
     }
+  }); // end function to toggle the card open and off
 
 
-
-  });
-
-
+  /**
+   *
+   * change color of the card based on response
+   *
+   */
+ // still to be implemented
 
 
 

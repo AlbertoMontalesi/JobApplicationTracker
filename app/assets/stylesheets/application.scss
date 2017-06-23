@@ -1,5 +1,10 @@
 @import "materialize/components/color";
 // override the default colors here*
+
+/*=============================================
+=            COLORS            =
+=============================================*/
+
 // main colors for navbar and call to action
 $main_color: #FFD400;
 // secondary color for font
@@ -25,17 +30,26 @@ span {
 //set the main background color to bright yellow
 .main-bg-color {
   background-color: $main-color !important;
+  color: $font_color !important;
 }
 
 .secondary-bg-color {
   background-color: $secondary_color !important;
 }
 
+
+/*=====  End of COLORS  ======*/
+
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
 @import "materialize";
-.field label {
-  font-size: 1.5rem;
-}
+
+/*=============================================
+=            GENERAL
+=============================================*/
+
+
+/*=====  End of GENERAL
+
 
 
 /*=============================================
@@ -56,14 +70,14 @@ span {
 
 .brand-logo {
   @media #{$medium-and-down} {
-    font-size: 5vw !important;
+    font-size: 6vw !important;
   }
 }
 
 .button-collapse {
   @media #{$medium-and-down} {
     .material-icons {
-      font-size: 6rem !important;
+      font-size: 6.5rem !important;
     }
   }
 }
@@ -72,10 +86,12 @@ nav {
   height: 7vh;
   padding-left: 5vw;
   padding-right: 5vw;
+  @media #{$medium-and-down} {
+    height: 10vh;
+  }
 }
 
 .side-nav {
-  ;
   display: flex;
   flex-direction: column;
   padding-top: 10vh;
@@ -84,6 +100,7 @@ nav {
 .side-nav li>a {
   font-size: 3rem !important;
   height: auto !important;
+  margin-top: 2vh;
 }
 
 
@@ -97,6 +114,9 @@ nav {
   background: url('forest.jpg');
   background-size: cover;
   background-position: center;
+  @media #{$medium-and-down} {
+    height: 90vh;
+  }
 }
 
 #overlay {
@@ -152,8 +172,14 @@ nav {
       margin-bottom: 2vh;
     }
     * {
-      font-size: 2rem !important;
+      font-size: 2.5rem !important;
     }
+  }
+  .btn {
+    padding: 1% 3% !important;
+    box-sizing: border-box;
+    width: auto;
+    height: auto;
   }
 }
 
@@ -168,13 +194,13 @@ nav {
 #create-form {
   @media #{$medium-and-down} {
     label {
-      font-size: 2rem;
+      font-size: 2.5rem;
     }
     .col {
       margin-bottom: 2vh;
     }
     input {
-      font-size: 2.5rem;
+      font-size: 3rem;
     }
   } //end breakpoint
   .col {
@@ -188,6 +214,9 @@ nav {
     margin: auto;
     font-weight: bold;
   }
+  h2 {
+    margin-top: 3vh;
+  }
 }
 
 
@@ -200,7 +229,6 @@ nav {
 
 #job-card {
   @media #{$medium-and-down} {
-
     .card-title {
       font-size: 3rem !important;
     }
@@ -212,14 +240,54 @@ nav {
     }
     .select-wrapper {
       margin-top: 2vh;
-    } p {
+    }
+    p {
       font-size: 1.5rem;
     }
-
-
-
+    .btn:not(.pin-icon, .card-description btn) {
+      padding: 1% 3% !important;
+      box-sizing: border-box;
+      width: auto;
+      height: auto;
+    }.card-tabs * {
+      font-size: 2.5rem !important;
+    }.card-description * {
+      font-size: 1.5rem;
+    }
   } // end breakpoint
 }
 
 
 /*=====  End of JOB CARD  ======*/
+
+
+/*=============================================
+=            USER FORMS            =
+=============================================*/
+
+.user-form {
+  @media #{$medium-and-down} {
+    *:not(h2) {
+      font-size: 3rem !important;
+    }
+    .field,
+    {
+      margin-top: 2vh;
+    }
+    h2 {
+      font-size: 5.5rem;
+    }
+    .btn {
+      padding: 1% 3% !important;
+      box-sizing: border-box;
+      width: auto;
+      height: auto;
+    }
+  } //end breakpoint
+  .actions input {
+    margin-top: 3vh;
+  }
+}
+
+
+/*=====  End of USER FORMS  ======*/

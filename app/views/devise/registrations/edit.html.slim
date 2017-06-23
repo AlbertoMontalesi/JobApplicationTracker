@@ -1,4 +1,4 @@
-.container
+.container.user-form
   h2
     | Edit #{resource_name.to_s.humanize}
   = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
@@ -12,7 +12,6 @@
         | Currently waiting confirmation for: #{resource.unconfirmed_email}
     .field
       = f.label :password
-      i (leave blank if you don't want to change it)
       br/
       = f.password_field :password, autocomplete: "off"
       - if @minimum_password_length
@@ -26,12 +25,11 @@
       = f.password_field :password_confirmation, autocomplete: "off"
     .field
       = f.label :current_password
-      i (we need your current password to confirm your changes)
       br/
       = f.password_field :current_password, autocomplete: "off"
     .actions
-      = f.submit "Update"
+      = f.submit "Update", class:'btn btn-large main-bg-color'
   h3 Cancel my account
   p
-    | Unhappy? #{button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete}
+    | Unhappy? #{button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, class:'btn red',method: :delete}
   = link_to "Back", :back
