@@ -1,8 +1,6 @@
 .container
-  h1 Your Job Applications
-
   .fixed-action-btn
-    .btn-floating.btn-large.red
+    .btn-floating.btn-large.main-bg-color
       a href='/jobs/new'
         i.material-icons add
   br
@@ -10,9 +8,14 @@
   br
   .card
     .card-content
+      h2 Search and Filter
       = render 'jobs/search_form'
   // create ransack form for responses and interviews
+  br
+  br
+  br
 
+  h1 Your job applications
   - @jobs.each do |j|
     .job-cards
       = render partial: 'jobs/card', locals: {job:j}

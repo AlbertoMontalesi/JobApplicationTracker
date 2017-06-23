@@ -6,6 +6,8 @@ $main_color: #FFD400;
 $font_color: #262626;
 //used for secondary buttons
 $secondary_color: #3498db;
+
+
 h1,
 h2,
 h3,
@@ -19,12 +21,15 @@ span {
 
 // set the main color of the font to almost black
 .main-font-color {
-  color: $font-color;
+  color: $font-color !important;
 }
 
 //set the main background color to bright yellow
 .main-bg-color {
-  background-color: $main-color;
+  background-color: $main-color !important;
+}
+.secondary-bg-color {
+  background-color: $secondary_color !important;
 }
 
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
@@ -71,11 +76,13 @@ nav {
 }
 
 .side-nav {
+  ;
   display: flex;
   flex-direction: column;
   padding-top: 10vh;
 }
-.side-nav li >a {
+
+.side-nav li>a {
   font-size: 3rem !important;
   height: auto !important;
 }
@@ -134,3 +141,63 @@ nav {
 
 
 /*=====  End of HOMEPAge  ======*/
+
+
+/*=============================================
+=            SEARCH FORMS            =
+=============================================*/
+
+#search-forms {
+  @media #{$medium-and-down} {
+    .col {
+      margin-bottom: 2vh;
+    }
+    label {
+      font-size: 2rem;
+    }
+    input {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+
+/*=====  End of SEARCH FORMS  ======*/
+
+
+
+
+
+/*=============================================
+=            CREATE FORM            =
+=============================================*/
+#create-form {
+  @media #{$medium-and-down} {
+    label {
+      font-size: 2rem;
+    }
+    .col {
+      margin-bottom: 2vh;
+    }
+    input {
+      font-size: 2.5rem;
+    }
+
+  } //end breakpoint
+  .col {
+    margin-bottom: 1.5vh;
+  }
+  .btn {
+    display: flex;
+    flex-direction: row;
+  } .btn input {
+    margin: auto;
+    font-weight: bold;
+  } 
+}
+
+
+/*=====  End of CREATE FORM  ======*/
+
+
+

@@ -1,17 +1,17 @@
 .container
   h1 Add a new job application
-  .row
-    = form_for @job, html: {class: "col s12"} do |f|
-      .input_field
+  .row#create-form
+    = form_for @job do |f|
+      .input_field.col.s12
         = f.label :company
         = f.text_field :company
-      .input_field
+      .input_field.col.s12
         = f.label :role
         = f.text_field :role
-      .input_field
+      .input_field.col.s12.l6
         = f.label :link
         = f.text_field :link
-      .input_field
+      .input_field.col.s12.l6
         = f.label :salary
         = f.number_field :salary
       .row
@@ -36,4 +36,4 @@
           = f.label :contact_phone
           = f.phone_field :contact_phone
         .input_field
-          = f.submit "Submit", class:'btn'
+          = f.submit "Create", class:'btn btn-large waves-effect waves-light main-bg-color'
