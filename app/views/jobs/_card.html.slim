@@ -1,14 +1,13 @@
 .row
   .card
+    a.btn-floating.waves-effect.waves-light
+      i.small.material-icons.icon-collapse add
     .pin-form
       = render partial: 'jobs/pin_icon', locals: {job:job}
-
-
     .card-content
       .card-title
         .row
           .col.s12.m6
-              
               b = job.role
               |  at 
               b = job.company
@@ -21,8 +20,8 @@
         b = job.application_closing_date.strftime("|| Closing on %d/%m/%Y")
         
         
-        
-    .card-tabs
+    // by default hide it to make the card more compact    
+    .card-tabs.hide
       ul.tabs.tabs-fixed-width
         li.tab
           a[href="#test#{job.id.to_s}#{'a'}"]
@@ -33,7 +32,8 @@
         li.tab
           a[href="#test#{job.id.to_s}#{'c'}"]
             | Notes
-    .card-content.grey.lighten-4
+    // by default hide it to make the card more compact   
+    .card-content.card-description.grey.lighten-4.hide
 
       div[id="test#{job.id.to_s}#{'a'}"]
         p 
