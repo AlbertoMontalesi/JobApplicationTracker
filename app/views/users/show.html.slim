@@ -1,0 +1,10 @@
+h1 Hello #{@user.email}
+
+h2 Your applications
+.row
+  .col.s12.m4
+    /* display total jobs applied */
+    p You applied #{@user.jobs.count} Jobs
+  .col.s12.m4
+    // display jobs where the user received a response
+    p You received #{@user.jobs.where.not(response: 'no_response').count} responses

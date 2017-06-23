@@ -1,8 +1,11 @@
 class JobsController < ApplicationController
   respond_to :html, :js, :json
 
+  before_action :authenticate_user!
+
   def index
-    @q = Job.ransack(params[:q])
+    @my_job = Job.where(user_id: current_user.id)
+    @q = @my_job.ransack(params[:q])
     @jobs = @q.result.order(pin: :desc,created_at: :desc)
     respond_to do |format|
       format.js
