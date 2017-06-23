@@ -1,23 +1,67 @@
 @import "materialize/components/color";
 // override the default colors here*
+// main colors for navbar and call to action
+$main_color: #FFD400;
+// secondary color for font
+$font_color: #262626;
+//used for secondary buttons
+$secondary_color: #3498db;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  color: $font_color !important;
+}
 
+// set the main color of the font to almost black
+.main-font-color {
+  color: $font-color;
+}
 
-
-
+//set the main background color to bright yellow
+.main-bg-color {
+  background-color: $main-color;
+}
 
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
 @import "materialize";
-
-
-
 .field label {
   font-size: 1.5rem;
 }
 
 
-/* NAVBAR */
-#mobile-demo li {
-  font-size: 3rem;
+/*=============================================
+=           NAVBAR            =
+=============================================*/
+
+
+/*=====  End ofNAVBAR  ======*/
+
+.nav-wrapper {
+  @media #{$medium-and-down} {
+    // styles for small screens and down
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.brand-logo {
+  @media #{$medium-and-down} {
+    font-size: 5vw !important;
+  }
+}
+
+.button-collapse {
+  @media #{$medium-and-down} {
+    .material-icons {
+      font-size: 6rem !important;
+    }
+  }
 }
 
 nav {
@@ -26,10 +70,21 @@ nav {
   padding-right: 5vw;
 }
 
+.side-nav {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10vh;
+}
+.side-nav li >a {
+  font-size: 3rem !important;
+  height: auto !important;
+}
+
 
 /*=============================================
 =            HOMEPAge            =
 =============================================*/
+
 #homepage {
   height: 93vh;
   overflow: hidden;
@@ -37,10 +92,11 @@ nav {
   background-size: cover;
   background-position: center;
 }
+
 #overlay {
   height: 100%;
   width: 100%;
-  background-color: transparentize(black,0.6);
+  background-color: transparentize(black, 0.6);
   display: flex;
   flex-direction: row;
   margin: auto;
@@ -48,18 +104,22 @@ nav {
 }
 
 #left {
-  background-color: transparentize(white,0.5);
+  background-color: transparentize(white, 0.5);
   padding: 2vh;
 }
-#left, #right {
+
+#left,
+#right {
   display: flex;
   margin: auto;
   flex-direction: column;
   flex-wrap: wrap;
 }
+
 #left div a {
   margin-right: 2vw;
 }
+
 #left h1 {
   max-width: 100%;
   word-wrap: break-word;
@@ -74,4 +134,3 @@ nav {
 
 
 /*=====  End of HOMEPAge  ======*/
-
