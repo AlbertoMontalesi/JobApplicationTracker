@@ -1,23 +1,24 @@
 .row
   .card
-    a.btn-floating.waves-effect.waves-light
-      i.small.material-icons.icon-collapse add
+    
     .pin-form
       = render partial: 'jobs/pin_icon', locals: {job:job}
     .card-content
       .card-title
         .row
-          .col.s12.m6
+          .col.s12.l6
               b = job.role
               |  at 
               b = job.company
-          .col.s12.m6.form-response
+          .col.s12.l6.form-response
               = render partial: 'jobs/select_response', locals: {job:job}
 
               
       p 
         = job.application_date.strftime("Applied on %d/%m/%Y ") 
         b = job.application_closing_date.strftime("|| Closing on %d/%m/%Y")
+      a.btn-floating.halfway-fab.waves-effect.waves-light
+        i.small.material-icons.icon-collapse add
         
         
     // by default hide it to make the card more compact    
