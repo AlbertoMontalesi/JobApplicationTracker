@@ -1,6 +1,5 @@
-.row
+.row#job-card
   .card
-    
     .pin-form
       = render partial: 'jobs/pin_icon', locals: {job:job}
     .card-content
@@ -57,12 +56,12 @@
       div[id="test#{job.id.to_s}#{'c'}"]
         
         // if you rename the class remember to change in the jobs.js
-        a.btn-floating.btn-small.red.note-edit.right-align
+        a.btn-floating.btn-small.main-bg-color.note-edit.right-align
           i.small.material-icons mode_edit
         br
         = form_for job, url: job_path(job), remote: true,method: :patch do |jj|
           = jj.hidden_field :id
           = jj.label :notes
           = jj.text_area :notes, :readonly => true
-          = jj.submit "Update", class:'hide btn'
+          = jj.submit "Update", class:'hide btn secondary-bg-color'
 

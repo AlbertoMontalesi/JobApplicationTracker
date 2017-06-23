@@ -6,8 +6,6 @@ $main_color: #FFD400;
 $font_color: #262626;
 //used for secondary buttons
 $secondary_color: #3498db;
-
-
 h1,
 h2,
 h3,
@@ -28,6 +26,7 @@ span {
 .main-bg-color {
   background-color: $main-color !important;
 }
+
 .secondary-bg-color {
   background-color: $secondary_color !important;
 }
@@ -152,11 +151,8 @@ nav {
     .col {
       margin-bottom: 2vh;
     }
-    label {
-      font-size: 2rem;
-    }
-    input {
-      font-size: 2.5rem;
+    * {
+      font-size: 2rem !important;
     }
   }
 }
@@ -165,12 +161,10 @@ nav {
 /*=====  End of SEARCH FORMS  ======*/
 
 
-
-
-
 /*=============================================
 =            CREATE FORM            =
 =============================================*/
+
 #create-form {
   @media #{$medium-and-down} {
     label {
@@ -182,7 +176,6 @@ nav {
     input {
       font-size: 2.5rem;
     }
-
   } //end breakpoint
   .col {
     margin-bottom: 1.5vh;
@@ -190,14 +183,43 @@ nav {
   .btn {
     display: flex;
     flex-direction: row;
-  } .btn input {
+  }
+  .btn input {
     margin: auto;
     font-weight: bold;
-  } 
+  }
 }
 
 
 /*=====  End of CREATE FORM  ======*/
 
 
+/*=============================================
+=            JOB CARD            =
+=============================================*/
 
+#job-card {
+  @media #{$medium-and-down} {
+
+    .card-title {
+      font-size: 3rem !important;
+    }
+    .form-response {
+      font-size: 3rem !important;
+    }
+    .edit_job * {
+      font-size: 2.5rem !important;
+    }
+    .select-wrapper {
+      margin-top: 2vh;
+    } p {
+      font-size: 1.5rem;
+    }
+
+
+
+  } // end breakpoint
+}
+
+
+/*=====  End of JOB CARD  ======*/

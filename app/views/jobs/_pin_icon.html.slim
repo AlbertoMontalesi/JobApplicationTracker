@@ -2,9 +2,9 @@
     - if job.pin === false
         = pin.hidden_field :pin, :value => 'true'
         = button_tag type: 'submit', class: 'btn btn-floating pin-icon' do
-          i.material-icons label_outline
+          i.material-icons.secondary-bg-color label_outline
     - else
         = pin.hidden_field :pin, :value => 'false'
         = button_tag type: 'submit', class: 'btn btn-floating pin-icon' do
-          i.material-icons.lime.accent-2 label_outline
+          i.material-icons.main-bg-color label_outline
 
