@@ -47,7 +47,7 @@ ready = function () {
   /**
    *
    * change color of the card based on response
-   *
+   
    */
  // still to be implemented
 

@@ -111,7 +111,7 @@ nav {
 #homepage {
   height: 93vh;
   overflow: hidden;
-  background: url('forest.jpg');
+  background:url(asset-path('forest.jpg'));
   background-size: cover;
   background-position: center;
   @media #{$medium-and-down} {
