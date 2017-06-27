@@ -1,12 +1,11 @@
 #homepage
-  #overlay.row
-    #left.col.s12.m6.card
-      h1 MyApplicationMate
-      h3 To help you organize your job applications
-      h6 Try it now for free
-      div
+  #overlay
+    .row#home-container
+      #left.col.s12.m8
+        h1 MyApplicationMate
+        h3 To help you organize your job applications
+        h6 Try it now for free
+      #right.col.s12.m4
         = link_to "Register now", new_user_registration_path, class:'btn btn-large cyan'
         = link_to "Log In", new_user_session_path, class:'btn'
-    #right.col.s12.m6
-      = image_tag("screenshot.jpg")
 

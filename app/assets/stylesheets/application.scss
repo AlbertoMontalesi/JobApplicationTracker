@@ -22,6 +22,10 @@ span {
   color: $font_color !important;
 }
 
+html {
+  font-size: 1.3vw;
+}
+
 // set the main color of the font to almost black
 .main-font-color {
   color: $font-color !important;
@@ -60,6 +64,7 @@ span {
 /*=====  End ofNAVBAR  ======*/
 
 .nav-wrapper {
+  width: 100%;
   @media #{$medium-and-down} {
     // styles for small screens and down
     display: flex;
@@ -69,12 +74,10 @@ span {
 }
 
 .brand-logo {
-  @media #{$medium-and-down} {
-    font-size: 6vw !important;
-  }
+  font-size: 4rem !important;
 }
 
-.button-collapse {
+.button-collapse,.brand-logo {
   @media #{$medium-and-down} {
     .material-icons {
       font-size: 6.5rem !important;
@@ -97,10 +100,17 @@ nav {
   padding-top: 10vh;
 }
 
-.side-nav li>a {
+.side-nav li>a{
   font-size: 3rem !important;
   height: auto !important;
-  margin-top: 2vh;
+  margin-top: 2rem;
+}
+
+.right li a {
+  font-size: 2rem !important;
+  @media #{$medium-and-down} {
+    font-size: 3rem !important;
+  }
 }
 
 
@@ -110,8 +120,9 @@ nav {
 
 #homepage {
   height: 93vh;
+  width: 100vw;
   overflow: hidden;
-  background:url(asset-path('forest.jpg'));
+  background: url(asset-path('forest.jpg'));
   background-size: cover;
   background-position: center;
   @media #{$medium-and-down} {
@@ -124,38 +135,35 @@ nav {
   width: 100%;
   background-color: transparentize(black, 0.6);
   display: flex;
-  flex-direction: row;
-  margin: auto;
+  align-items: center;
   padding-left: 5vw;
 }
 
-#left {
+#home-container {
   background-color: transparentize(white, 0.5);
   padding: 2vh;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  flex-wrap: wrap;
 }
 
-#left,
-#right {
+#left {
   display: flex;
   margin: auto;
   flex-direction: column;
   flex-wrap: wrap;
 }
 
-#left div a {
-  margin-right: 2vw;
+#right a {
+  width: auto;
+  margin: auto;
 }
 
 #left h1 {
   max-width: 100%;
   word-wrap: break-word;
-}
-
-#right img {
-  width: 30vw;
-  max-width: 300px;
-  max-height: 500px;
-  margin: auto;
 }
 
 
@@ -173,7 +181,7 @@ nav {
     }
     * {
       font-size: 3.5rem !important;
-    } 
+    }
   } // end breakpoint
   .btn {
     padding: 2% 4% !important;
@@ -181,8 +189,7 @@ nav {
     width: auto;
     height: auto;
   }
-} 
-
+}
 
 
 /*=====  End of SEARCH FORMS  ======*/
@@ -232,11 +239,12 @@ nav {
   @media #{$medium-and-down} {
     .card-title {
       font-size: 3.5rem !important;
-      
-      .col,.form-response {
+      .col,
+      .form-response {
         margin-bottom: 1.5vh !important;
         line-height: 4rem;
-      } .btn-response {
+      }
+      .btn-response {
         margin-top: 1vh !important;
       }
     }
@@ -251,18 +259,20 @@ nav {
     }
     p {
       font-size: 2rem;
-    }.btn:not(.pin-icon):not(.collapse-icon) {
+    }
+    .btn:not(.pin-icon):not(.collapse-icon) {
       padding: 2% 4% !important;
       box-sizing: border-box;
       width: auto;
       height: auto;
-    }
-   // style the two buttons
-    .pin-icon, .collapse-icon {
+    } // style the two buttons
+    .pin-icon,
+    .collapse-icon {
       width: 10vw !important;
-      height: 10vw !important ;
+      height: 10vw !important;
     }
-    .pin-icon i, .collapse-icon i {
+    .pin-icon i,
+    .collapse-icon i {
       font-size: 3rem !important;
     }
     .collapse-icon {
@@ -272,10 +282,10 @@ nav {
     .collapse-icon i {
       margin: auto;
     }
-    
     .card-tabs * {
       font-size: 3rem !important;
-    }.card-description * {
+    }
+    .card-description * {
       font-size: 2rem;
     }
   } // end breakpoint
@@ -317,28 +327,24 @@ nav {
 /*=====  End of USER FORMS  ======*/
 
 
-
 /*=============================================
 =            INDEX PAGE            =
 =============================================*/
+
 .new-icon {
-   @media #{$medium-and-down} {
+  @media #{$medium-and-down} {
     width: 12vw !important;
-      height: 12vw !important ;
-      display: flex;
-      flex-direction: row;
-
-      a {
-        margin: auto;
-      }
-      i {
-        font-size: 4rem !important;
-        
-      }
-   } // end breakpoint 
-
+    height: 12vw !important;
+    display: flex;
+    flex-direction: row;
+    a {
+      margin: auto;
+    }
+    i {
+      font-size: 4rem !important;
+    }
+  } // end breakpoint 
 }
 
 
 /*=====  End of INDEX PAGE  ======*/
-
