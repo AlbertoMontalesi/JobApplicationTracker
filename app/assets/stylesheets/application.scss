@@ -42,6 +42,8 @@ html {
 }
 
 
+
+
 /*=====  End of COLORS  ======*/
 
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
@@ -50,7 +52,15 @@ html {
 /*=============================================
 =            GENERAL
 =============================================*/
-
+  .container {
+  position: relative;
+      height: auto;
+  
+    @media #{$medium-and-down} {
+      min-height: 85vh;
+      // to have the login and signup big buttons almost at the botto of the page
+    }
+}
 
 /*=====  End of GENERAL
 
@@ -80,7 +90,8 @@ html {
   }
 }
 
-.button-collapse,.brand-logo {
+.button-collapse,
+.brand-logo {
   @media #{$medium-and-down} {
     .material-icons {
       font-size: 6.5rem !important;
@@ -103,7 +114,7 @@ nav {
   padding-top: 10vh;
 }
 
-.side-nav li>a{
+.side-nav li>a {
   font-size: 3rem !important;
   height: auto !important;
   margin-top: 2rem;
@@ -151,7 +162,6 @@ nav {
   flex-wrap: wrap;
 }
 
-
 #left {
   @media #{$medium-and-down} {
     text-align: center;
@@ -163,12 +173,13 @@ nav {
   flex-wrap: wrap;
 }
 
-#right{
+#right {
   display: flex;
   flex-direction: row;
   margin: auto;
   justify-content: space-around;
 }
+
 #left h1 {
   font-size: 4rem !important;
   max-width: 100%;
@@ -329,6 +340,13 @@ nav {
     }
   } //end breakpoint
   .actions input {
+    @media #{$medium-and-down} {
+      width: 100%;
+      position: absolute;
+      bottom: 10vh;
+      display: block;
+      height: 10vh;
+    }
     margin-top: 3vh;
   }
 }
