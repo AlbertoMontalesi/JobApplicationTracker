@@ -22,6 +22,12 @@ span {
   color: $font_color !important;
 }
 
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
 html {
   font-size: 1.3vw;
 }
@@ -42,8 +48,6 @@ html {
 }
 
 
-
-
 /*=====  End of COLORS  ======*/
 
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
@@ -52,15 +56,15 @@ html {
 /*=============================================
 =            GENERAL
 =============================================*/
-  .container {
+
+.container {
   position: relative;
-      height: auto;
-  
-    @media #{$medium-and-down} {
-      min-height: 85vh;
-      // to have the login and signup big buttons almost at the botto of the page
-    }
+  height: auto;
+  @media #{$medium-and-down} {
+    min-height: 85vh; // to have the login and signup big buttons almost at the botto of the page
+  }
 }
+
 
 /*=====  End of GENERAL
 
@@ -155,11 +159,28 @@ nav {
 #home-container {
   background-color: transparentize(white, 0.3);
   padding: 2vh;
+  min-height: 30vh;
   height: auto;
   display: flex;
   flex-direction: row;
   margin: auto;
   flex-wrap: wrap;
+}
+
+#left *,
+#right * {
+  @media #{$medium-and-down} {
+    font-size: 3rem !important;
+  }
+}
+
+#home-container #left h1 {
+  max-width: 100%;
+  word-wrap: break-word;
+  font-size: bold !important;
+  @media #{$medium-and-down} {
+    font-size: 5rem !important;
+  }
 }
 
 #left {
@@ -178,13 +199,12 @@ nav {
   flex-direction: row;
   margin: auto;
   justify-content: space-around;
-}
-
-#left h1 {
-  font-size: 4rem !important;
-  max-width: 100%;
-  word-wrap: break-word;
-  font-size: bold;
+  @media #{$medium-and-down} {
+    a {
+      height: auto;
+      padding: 2vh;
+    }
+  }
 }
 
 
@@ -237,11 +257,17 @@ nav {
   }
   .btn {
     display: flex;
+    width: 100%;
     flex-direction: row;
+    text-align: center;
+    @media #{$medium-and-down} {
+     height: 5vh; 
+    }
   }
   .btn input {
     margin: auto;
     font-weight: bold;
+    
   }
   h2 {
     margin-top: 3vh;
@@ -341,8 +367,8 @@ nav {
   } //end breakpoint
   .actions input {
     @media #{$medium-and-down} {
-      width: 100%;
-      position: absolute;
+      width: 85vw;
+      position: fixed;
       bottom: 10vh;
       display: block;
       height: 10vh;

@@ -14,8 +14,11 @@
 
               
       p 
-        = job.application_date.strftime("Applied on %d/%m/%Y ") 
-        b = job.application_closing_date.strftime("|| Closing on %d/%m/%Y")
+        = job.application_date.strftime("Applied on %d/%m/%Y ")
+        - if Time.now > job.application_closing_date 
+          b = job.application_closing_date.strftime("|| Closed on %d/%m/%Y")
+        - else
+          b = job.application_closing_date.strftime("|| Closing on %d/%m/%Y")
       a.btn-floating.halfway-fab.waves-effect.waves-light.collapse-icon
         i.material-icons.icon-collapse add
         
