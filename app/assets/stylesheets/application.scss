@@ -43,6 +43,9 @@ html {
   color: $font_color !important;
 }
 
+.secondary-font-color {
+  color: $secondary_color  !important;
+}
 .secondary-bg-color {
   background-color: $secondary_color !important;
 }
@@ -336,6 +339,11 @@ nav {
       font-size: 2rem;
     }
   } // end breakpoint
+  .pin-icon {
+    position: relative;
+    left: -1vw;
+    top: -1vh;
+  }
 }
 
 
@@ -384,17 +392,21 @@ nav {
 /*=============================================
 =            INDEX PAGE            =
 =============================================*/
+// btn to add new job
 
 .new-icon {
   @media #{$medium-and-down} {
     width: 12vw !important;
     height: 12vw !important;
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
     a {
-      margin: auto;
-    }
+      display: flex;
+    }    
     i {
+      margin: auto;
       font-size: 4rem !important;
     }
   } // end breakpoint 

@@ -19,6 +19,7 @@
           b = job.application_closing_date.strftime("|| Closed on %d/%m/%Y")
         - else
           b = job.application_closing_date.strftime("|| Closing on %d/%m/%Y")
+          //icon to collapse the description
       a.btn-floating.halfway-fab.waves-effect.waves-light.collapse-icon
         i.material-icons.icon-collapse add
         
@@ -27,6 +28,7 @@
     .card-tabs.hide
       ul.tabs.tabs-fixed-width
         li.tab
+          // link the tab with the divs below
           a[href="#test#{job.id.to_s}#{'a'}"]
             | Description
         li.tab
@@ -57,8 +59,10 @@
         = job.contact_phone
 
       div[id="test#{job.id.to_s}#{'c'}"]
-        
         // if you rename the class remember to change in the jobs.js
+      
+
+        
         a.btn-floating.btn-small.main-bg-color.note-edit.right-align
           i.small.material-icons mode_edit
         br
