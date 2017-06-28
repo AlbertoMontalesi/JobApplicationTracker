@@ -16,8 +16,12 @@
   br
   br
 
-  h1 Your job applications
-  - @jobs.each do |j|
-    .job-cards
-      = render partial: 'jobs/card', locals: {job:j}
+  #my-jobs
+    h1 Your job applications
+    - @jobs.each do |j|
+      .job-cards
+        = render partial: 'jobs/card', locals: {job:j}
 
+        // implement infinite scrolling here
+    
+    = will_paginate @jobs

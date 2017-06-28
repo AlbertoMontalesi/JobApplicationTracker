@@ -412,5 +412,16 @@ nav {
   } // end breakpoint 
 }
 
+//style the pagination buttons
+.pagination {
+  margin-bottom: 2vh;
+  font-size: 1.5rem;
+  @media #{$medium-and-down} {
+    font-size: 3rem;
+
+  }
+
+}
 
 /*=====  End of INDEX PAGE  ======*/
+

@@ -8,4 +8,7 @@ class Job < ApplicationRecord
   validates :company, :role, :application_date,presence: true
 
   belongs_to :user
+
+  ##for the paginate gem
+  self.per_page = 10
 end
