@@ -1,24 +1,36 @@
-# README
+# Job Application Mate
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+With Job Application Mate you can easily take note of the job you applied for, which one are you still waiting for a response and the ones that invited you to an interview.
 
-Things you may want to cover:
+No more need to use excel spreadsheet to keep track.
 
-* Ruby version
+Take notes if you have any details to update your job application 
 
-* System dependencies
+Take note of a contact to reach out for that particular company
 
-* Configuration
+## Gallery
 
-* Database creation
+Add your job applications
+![cards](/app/assets/images/screenshots/cards.png)
 
-* Database initialization
+Overview of your user profile
+![cards](/app/assets/images/screenshots/user_profile.png)
+## Notes
 
-* How to run the test suite
+Feel free to improve this project, any pull request is welcome
 
-* Services (job queues, cache servers, search engines, etc.)
+## License
 
-* Deployment instructions
+    Copyright [2017] [Alberto Montalesi]
 
-* ...
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License. 
