@@ -1,11 +1,42 @@
-.container
-  h1 Hello #{@user.email}
-
-  h2 Your applications
+.container#user-profile
   .row
-    .col.s12.m4
-      /* display total jobs applied */
-      p You applied #{@user.jobs.count} Jobs
-    .col.s12.m4
-      // display jobs where the user received a response
-      p You received #{@user.jobs.where.not(response: 'no_response').count} responses
+    .col.s12
+      h1 = @user.username
+  .row
+    .col.s12.l4
+      .card
+        .card-title
+          = @user.jobs.count
+        .card-description
+          p Jobs added
+    .col.s12.l4
+      .card
+        .card-title
+          = @user.response_jobs
+        .card-description
+          p Responses
+    .col.s12.l4
+      .card
+        .card-title
+          = @user.refused_jobs
+        .card-description
+          p Refusal
+  .row
+    .col-s12
+      ul
+        li
+          = link_to "Edit Profile", edit_user_registration_path(current_user)
+        
+
+
+
+  / h1 Hello #{@user.email}
+
+  / h2 Your applications
+  / .row
+  /   .col.s12.m4
+  /     /* display total jobs applied */
+  /     p You applied #{@user.jobs.count} Jobs
+  /   .col.s12.m4
+  /     // display jobs where the user received a response
+  /     p You received #{@user.jobs.where.not(response: 'no_response').count} responses

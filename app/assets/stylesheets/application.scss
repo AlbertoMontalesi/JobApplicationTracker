@@ -116,6 +116,7 @@ nav {
 }
 
 .side-nav {
+  width: 40%;
   display: flex;
   flex-direction: column;
   padding-top: 10vh;
@@ -124,7 +125,7 @@ nav {
 .side-nav li>a {
   font-size: 4rem !important;
   height: auto !important;
-  margin-top: 2rem;
+  margin-top: 10rem;
 }
 
 .right li a {
@@ -345,6 +346,13 @@ nav {
     top: -1vh;
   }
 }
+#job-card .card {
+  background-color:transparentize($main_color,0.2)
+}
+.card-content.card-description {
+  background-color:white;
+}
+
 
 
 /*=====  End of JOB CARD  ======*/
@@ -424,4 +432,55 @@ nav {
 }
 
 /*=====  End of INDEX PAGE  ======*/
+
+
+
+
+/*=============================================
+=            USER PROFILE            =
+=============================================*/
+#user-profile h1 {
+  font-weight: bold;
+  @media #{$medium-and-down} {
+    font-size: 5rem !important;
+  }
+
+}
+
+#user-profile .card {
+  height: auto;
+  min-height: 10rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#user-profile .card .card-title {
+  flex-grow: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  font-weight: bold;
+  @media #{$medium-and-down} {
+    font-size: 6rem;
+
+  }
+}
+#user-profile .col:nth-child(3) .card {
+  background-color:transparentize(#e74c3c,0.3);
+}
+#user-profile .card .card-description {
+  flex-grow: 1;
+  font-size: 2rem;
+  @media #{$medium-and-down} {
+    font-size: 3rem;
+
+  }
+}
+#user-profile li {
+  font-size: 2rem;
+}
+
+/*=====  End of USER PROFILE  ======*/
 

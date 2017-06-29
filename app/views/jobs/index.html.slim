@@ -18,6 +18,8 @@
 
   #my-jobs
     h1 Your job applications
+    br
+    br
     - @jobs.each do |j|
       .job-cards
         = render partial: 'jobs/card', locals: {job:j}
