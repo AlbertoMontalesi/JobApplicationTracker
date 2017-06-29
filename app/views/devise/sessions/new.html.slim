@@ -4,9 +4,9 @@
   .row.user-form
     = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
       .field.col.s12
-        = f.label :email
+        = f.label :username
         br/
-        = f.email_field :email, autofocus: true
+        = f.text_field :email, autofocus: true
       .field.col.s12
         = f.label :password
         br/

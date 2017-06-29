@@ -6,6 +6,7 @@ d5 = DateTime.new(2018, 5, 20)
 d6 =  DateTime.new(2018, 6, 7)
 
 User.create(
+  username: 'albertom',
   email: 'alberto@example.com',
   password: '123456',
   password_confirmation: '123456'
