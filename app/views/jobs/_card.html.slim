@@ -63,8 +63,8 @@
       
 
         
-        a.btn-floating.btn-small.main-bg-color.note-edit.right-align
-          i.small.material-icons mode_edit
+        a.btn-floating.main-bg-color.note-edit.right-align
+          i.material-icons mode_edit
         br
         = form_for job, url: job_path(job), remote: true,method: :patch do |jj|
           = jj.hidden_field :id

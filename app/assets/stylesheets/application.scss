@@ -311,7 +311,7 @@ nav {
     p {
       font-size: 2rem;
     }
-    .btn:not(.pin-icon):not(.collapse-icon) {
+    .btn:not(.pin-icon):not(.collapse-icon):not(.note-edit) {
       padding: 2% 4% !important;
       box-sizing: border-box;
       width: auto;
@@ -322,22 +322,40 @@ nav {
       width: 10vw !important;
       height: 10vw !important;
     }
+    .note-edit {
+      width: 7vw !important;
+      height: 7vw !important;
+    }
     .pin-icon i,
     .collapse-icon i {
       font-size: 3rem !important;
     }
-    .collapse-icon {
+    .note-edit i {
+      font-size: 2rem !important;
+    }
+    // center the icons, have problem an are not centered by default
+    .collapse-icon, .note-edit {
       display: flex;
       flex-direction: row;
     }
-    .collapse-icon i {
+    .collapse-icon i, .note-edit i {
       margin: auto;
     }
+    .card-tabs .tabs {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      box-sizing: content-box;
+    }
     .card-tabs * {
+      
       font-size: 3rem !important;
     }
     .card-description * {
       font-size: 2rem;
+    }
+    //make the notes area higher
+    #job_notes {
+      min-height: 10vh;
     }
   } // end breakpoint
   .pin-icon {
@@ -363,6 +381,7 @@ nav {
 =============================================*/
 
 .user-form {
+  height: auto;
   @media #{$medium-and-down} {
     *:not(h2) {
       font-size: 3rem !important;
@@ -381,7 +400,7 @@ nav {
       height: auto;
     }
   } //end breakpoint
-  .actions input {
+  .actions input:not(#update-profile) {
     @media #{$medium-and-down} {
       width: 85vw;
       position: fixed;
