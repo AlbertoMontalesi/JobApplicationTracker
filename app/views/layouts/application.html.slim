@@ -19,7 +19,12 @@ html
     = favicon_link_tag 'favicon.png'
   
   body
-    = render 'layouts/navbar'
-    / .notice= notice
-    / .alert= alert
-    = yield
+    main
+      = render 'layouts/navbar'
+      / .notice= notice
+      / .alert= alert
+      = yield
+    = render 'layouts/footer' unless(params[:controller] === "home" && params[:action] === "index")
+
+
+   

@@ -1,0 +1,25 @@
+footer.page-footer.main-bg-color
+  .container
+    .row
+      .col.l6.s12
+        h5 Job Aplication Mate
+        p.text-lighten-4 
+      .col.l4.offset-l2.s12
+        h5 
+        ul
+        - if user_signed_in?
+          li 
+            = link_to "Log Out", destroy_user_session_path, method: :delete
+          li
+            = link_to "My Profile", user_path(current_user)
+          li
+            = link_to "My Jobs", jobs_path
+        - else
+          li
+            = link_to "Register", new_user_registration_path
+          li
+            = link_to "Log In", new_user_session_path
+  .footer-copyright.main-bg-color-dark
+    .container
+      | © 2017 Copyright Alberto Montalesi
+      a.right href="https://github.com/AlbertoMontalesi/JobApplicationTracker"  Contribute on Github

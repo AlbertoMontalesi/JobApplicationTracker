@@ -42,6 +42,9 @@ html {
   background-color: $main-color !important;
   color: $font_color !important;
 }
+.main-bg-color-dark {
+  background-color: darken($main-color, 4) !important;
+}
 
 .secondary-font-color {
   color: $secondary_color  !important;
@@ -60,13 +63,21 @@ html {
 =            GENERAL
 =============================================*/
 
-.container {
+.container:not(footer.container) {
   position: relative;
   height: auto;
   @media #{$medium-and-down} {
     min-height: 85vh; // to have the login and signup big buttons almost at the botto of the page
   }
 }
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+main {
+  flex: 1 0 auto;
+  }
 
 
 /*=====  End of GENERAL
@@ -363,9 +374,13 @@ nav {
     left: -1vw;
     top: -1vh;
   }
+  .destroy {
+    position: relative;
+    top: -10vw;
+  }
 }
 #job-card .card {
-  background-color:transparentize($main_color,0.2)
+  background-color:transparentize($main_color,0.3)
 }
 .card-content.card-description {
   background-color:white;
@@ -390,6 +405,10 @@ nav {
     {
       margin-top: 2vh;
     }
+    label[for='user_remember_me']::before {
+      height: 2rem ;
+      width: 2rem ;
+    }
     h2 {
       font-size: 5.5rem;
     }
@@ -403,13 +422,15 @@ nav {
   .actions input:not(#update-profile) {
     @media #{$medium-and-down} {
       width: 85vw;
-      position: fixed;
-      bottom: 10vh;
       display: block;
       height: 10vh;
+      margin-bottom: 3vh;
     }
     margin-top: 3vh;
   }
+}
+.user-form:nth-child(2) {
+  min-height: auto !important;
 }
 
 
@@ -502,4 +523,33 @@ nav {
 }
 
 /*=====  End of USER PROFILE  ======*/
+
+
+
+
+/*=============================================
+=            FOOTER            =
+=============================================*/
+footer {
+  color: $font_color !important;
+  @media #{$medium-and-down} {
+    height: auto;
+    font-size: 3rem !important;
+
+    h5 {
+      font-size: 4rem !important;
+    }
+  }// end breakpoint
+
+  li {
+    list-style-type: none;
+  }
+  a {
+    color: inherit !important;
+  }
+}
+
+
+
+/*=====  End of FOOTER  ======*/
 
