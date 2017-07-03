@@ -11,6 +11,7 @@ $main_color: #FFD400;
 $font_color: #262626;
 //used for secondary buttons
 $secondary_color: #3498db;
+$danger_color:#F44336;
 h1,
 h2,
 h3,
@@ -375,9 +376,22 @@ nav {
     top: -1vh;
   }
   .destroy {
-    position: relative;
-    top: -10vw;
+    text-align: right;
+    height: 0;
+   
+   a {
+     cursor: pointer;
+     position: relative;
+     right: 2vw;
+     top: -5vh;
+     font-size: 3rem;
+      color: $danger_color !important;
+      @media #{$medium-and-down} {
+        font-size: 5rem !important;
+      } // end anchor breakpoint
+   }
   }
+
 }
 #job-card .card {
   background-color:transparentize($main_color,0.3)
@@ -531,6 +545,7 @@ nav {
 =            FOOTER            =
 =============================================*/
 footer {
+  margin-top: 10vh;
   color: $font_color !important;
   @media #{$medium-and-down} {
     height: auto;

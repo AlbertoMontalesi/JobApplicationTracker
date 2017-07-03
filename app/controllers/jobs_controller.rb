@@ -6,7 +6,7 @@ class JobsController < ApplicationController
   def index
     @my_job = Job.where(user_id: current_user.id)
     @q = @my_job.ransack(params[:q])
-    @jobs = @q.result.paginate(page: params[:page]).order(pin: :desc,created_at: :desc)
+    @jobs = @q.result.paginate(page: params[:page]).order(pin: :desc, created_at: :desc)
     respond_to do |format|
       format.html
       format.js
@@ -36,12 +36,16 @@ class JobsController < ApplicationController
       format.js
       format.html
     end
-    if @job.update_attributes(job_params) 
-      render index
-    end
+    render index if @job.update_attributes(job_params)
   end
 
-## used to change the pin value
+  def destroy
+    @job = Job.find(params[:id])
+    @job.destroy
+    redirect_to action: :index, status: 303 
+  end
+
+  ## used to change the pin value
 
   private
 

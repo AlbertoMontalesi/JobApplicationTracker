@@ -2,8 +2,9 @@
   .card
     .pin-form
       = render partial: 'jobs/pin_icon', locals: {job:job}
-    a.btn-floating.waves-effect.waves-light.destroy
-      i.material-icons x
+    .row.destroy
+      /!job is defined in job index.htmlslim
+      = link_to "x", job, method: :delete,class:'btn-floating.waves-effect.waves-light', data: {confirm: "Are you sure you want to delete the record?"}
     .card-content
       .card-title
         .row
