@@ -1,0 +1,37 @@
+
+{
+  "name": "Job Application Mate",
+  "short_name": "JobMate",
+  "icons": [
+    {
+      "src": /assets/icons/icon-32-1bb8abbfbbd0b7481d0471e32fadfdb73f10dff6a50e2939a269e4cf1d022147.png,
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+     {
+      "src":  /assets/icons/icon-64-19e540da10f0566abcf7ed7d3d78e050a58e9af3abfb3cdcea537795896275d6.png,
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+     {
+      "src":  /assets/icons/icon-128-b18870f8261741e7ebf0aa7ed755e0efbb97930477331a6626208df3810b1716.png,
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+     {
+      "src":  /assets/icons/icon-256-f22aff184f5c974168c22f361de0760c3ee761f58f2c3a606a73c869559b3992.png,
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+     {
+      "src":  /assets/icons/icon-512-46c860e73dc50be7fc16c1f3fed4905d456ea4c41bd7c304275c136a06a6c0c7.png,
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "theme_color": "#262626",
+  "background_color": "#262626",
+  "display": "fullscreen",
+  "orientation": "portrait"
+}
