@@ -8,6 +8,10 @@ Take notes if you have any details to update your job application
 
 Take note of a contact to reach out for that particular company
 
+## Try it [here](http://jobapplicationmate.herokuapp.com/)
+
+To login with an example account use this credentials: username: **TestUser** and password: **123456**
+
 ## Gallery
 
 Add your job applications
