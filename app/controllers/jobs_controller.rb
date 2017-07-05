@@ -20,7 +20,7 @@ class JobsController < ApplicationController
   def create
     @job = Job.new job_params
     if @job.save
-      redirect_to root_path
+      redirect_to jobs_path
     else
       render 'new'
     end
@@ -52,6 +52,6 @@ class JobsController < ApplicationController
   # unless the user selects interview stage we automatically set the interview stage so it wont display
 
   def job_params
-    params.require(:job).permit(:company, :role, :salary, :application_date, :application_closing_date, :contact_name, :contact_email, :contact_phone, :description, :link, :response, :interview_stage, :notes, :pin)
+    params.require(:job).permit(:company, :role, :salary, :application_date, :application_closing_date, :contact_name, :contact_email, :contact_phone, :description, :link, :response, :interview_stage, :notes, :pin, :user_id)
   end
 end

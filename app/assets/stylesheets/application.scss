@@ -258,8 +258,11 @@ nav {
 
 #create-form {
   @media #{$medium-and-down} {
-    label {
+    label, textarea {
       font-size: 2.5rem;
+    }
+    textarea {
+      min-height: 10vh;
     }
     .col {
       margin-bottom: 2vh;
@@ -272,23 +275,16 @@ nav {
     margin-bottom: 1.5vh;
   }
   .btn {
-    display: flex;
+    display: block;
     width: 100%;
     padding: 1% 3% !important;
     box-sizing: border-box;
     height: auto;
-    flex-direction: row;
-    text-align: center;
     @media #{$medium-and-down} {
      height: 10vh !important; 
     }
   }
-  .btn input {
-    margin: auto;
-    font-weight: bold;
-    text-align: center;
   
-  }
    
   h2 {
     margin-top: 3vh;

@@ -18,6 +18,7 @@
 //= require materialize-sprockets
 //= require turbolinks
 //= require turbolinks-compatibility
+//= require google_analytics
 //= require jobs
 //= require navbar
 //= require pin

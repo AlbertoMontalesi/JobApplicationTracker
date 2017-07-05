@@ -2,6 +2,15 @@
   h1 Add a new job application
   .row#create-form
     = form_for @job do |f|
+      - if @job.errors.any?
+        #error_explanation
+          h2 
+          = pluralize(@job.errors.count, "error")
+          |  prohibited this job to beng saved:
+          ul
+            - @job.errors.full_messages.each do |message|
+              li = message
+      = f.hidden_field :user_id, :value => current_user.id
       .input_field.col.s12
         = f.label :company
         = f.text_field :company
