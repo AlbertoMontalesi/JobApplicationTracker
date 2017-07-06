@@ -1,0 +1,77 @@
+/*=============================================
+=            HOMEPAge            =
+=============================================*/
+
+#homepage {
+  height: 93vh;
+  width: 100vw;
+  overflow: hidden;
+  background: url(asset-path('forest.jpg'));
+  background-size: cover;
+  background-position: center;
+  @media #{$medium-and-down} {
+    height: 90vh;
+  }
+}
+
+#overlay {
+  height: 100%;
+  width: 100%;
+  background-color: transparentize(black, 0.6);
+  display: flex;
+  align-items: center;
+}
+
+#home-container {
+  background-color: transparentize(white, 0.3);
+  padding: 2vh;
+  min-height: 30vh;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+#left *,
+#right * {
+  @media #{$medium-and-down} {
+    font-size: 3rem !important;
+  }
+}
+
+#home-container #left h1 {
+  max-width: 100%;
+  word-wrap: break-word;
+  font-size: bold !important;
+  @media #{$medium-and-down} {
+    font-size: 5rem !important;
+  }
+}
+
+#left {
+  @media #{$medium-and-down} {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+#right {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  justify-content: space-around;
+  @media #{$medium-and-down} {
+    a {
+      height: auto;
+      padding: 2vh;
+    }
+  }
+}
+
+
+/*=====  End of HOMEPAge  ======*/

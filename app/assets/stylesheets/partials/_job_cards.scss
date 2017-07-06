@@ -1,0 +1,108 @@
+
+/*=============================================
+=            JOB CARD            =
+=============================================*/
+
+#job-card {
+  @media #{$medium-and-down} {
+    .card-title {
+      font-size: 3.5rem !important;
+      .col,
+      .form-response {
+        margin-bottom: 1.5vh !important;
+        line-height: 4rem;
+      }
+      .btn-response {
+        margin-top: 1vh !important;
+      }
+    }
+    .form-response {
+      font-size: 3.5rem !important;
+    }
+    .edit_job * {
+      font-size: 3rem !important;
+    }
+    .select-wrapper {
+      margin-top: 2vh;
+    }
+    p {
+      font-size: 2rem;
+    }
+    .btn:not(.pin-icon):not(.collapse-icon):not(.note-edit) {
+      padding: 2% 4% !important;
+      box-sizing: border-box;
+      width: auto;
+      height: auto;
+    } // style the two buttons
+    .pin-icon,
+    .collapse-icon {
+      width: 10vw !important;
+      height: 10vw !important;
+    }
+    .note-edit {
+      width: 7vw !important;
+      height: 7vw !important;
+    }
+    .pin-icon i,
+    .collapse-icon i {
+      font-size: 3rem !important;
+    }
+    .note-edit i {
+      font-size: 2rem !important;
+    } // center the icons, have problem an are not centered by default
+    .collapse-icon,
+    .note-edit {
+      display: flex;
+      flex-direction: row;
+    }
+    .collapse-icon i,
+    .note-edit i {
+      margin: auto;
+    }
+    .card-tabs .tabs {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      box-sizing: content-box;
+    }
+    .card-tabs * {
+      font-size: 3rem !important;
+    }
+    .card-description * {
+      font-size: 2rem;
+    } //make the notes area higher
+    #job_notes {
+      min-height: 10vh;
+    }
+  } // end breakpoint
+  .pin-icon {
+    position: relative;
+    left: -1vw;
+    top: -1vh;
+  }
+  .destroy {
+    text-align: right;
+    height: 0;
+    a {
+      cursor: pointer;
+      position: relative;
+      right: 2vw;
+      top: -5vh;
+      font-size: 3rem;
+      color: $danger_color !important;
+      @media #{$medium-and-down} {
+        font-size: 5rem !important;
+      } // end anchor breakpoint
+    }
+  }
+}
+
+#job-card .card {
+  background-color: transparentize($main_color, 0.3)
+}
+
+.card-content.card-description {
+  background-color: white;
+}
+
+
+/*=====  End of JOB CARD  ======*/

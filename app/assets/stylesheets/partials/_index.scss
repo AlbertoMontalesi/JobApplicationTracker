@@ -1,0 +1,34 @@
+
+/*=============================================
+=            INDEX PAGE            =
+=============================================*/
+
+// btn to add new job
+.new-icon {
+  @media #{$medium-and-down} {
+    width: 12vw !important;
+    height: 12vw !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a {
+      display: flex;
+    }
+    i {
+      margin: auto;
+      font-size: 4rem !important;
+    }
+  } // end breakpoint 
+}
+
+//style the pagination buttons
+.pagination {
+  margin-bottom: 2vh;
+  font-size: 1.5rem;
+  @media #{$medium-and-down} {
+    font-size: 3rem;
+  }
+}
+
+
+/*=====  End of INDEX PAGE  ======*/

@@ -1,0 +1,25 @@
+
+/*=============================================
+=            FOOTER            =
+=============================================*/
+
+footer {
+  margin-top: 10vh;
+  color: $font_color !important;
+  @media #{$medium-and-down} {
+    height: auto;
+    font-size: 3rem !important;
+    h5 {
+      font-size: 4rem !important;
+    }
+  } // end breakpoint
+  li {
+    list-style-type: none;
+  }
+  a {
+    color: inherit !important;
+  }
+}
+
+
+/*=====  End of FOOTER  ======*/

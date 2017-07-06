@@ -1,0 +1,40 @@
+/*=============================================
+=            CREATE FORM            =
+=============================================*/
+
+#create-form {
+  @media #{$medium-and-down} {
+    label,
+    textarea {
+      font-size: 2.5rem;
+    }
+    textarea {
+      min-height: 10vh;
+    }
+    .col {
+      margin-bottom: 2vh;
+    }
+    input {
+      font-size: 3rem;
+    }
+  } //end breakpoint
+  .col {
+    margin-bottom: 1.5vh;
+  }
+  .btn {
+    display: block;
+    width: 100%;
+    padding: 1% 3% !important;
+    box-sizing: border-box;
+    height: auto;
+    @media #{$medium-and-down} {
+      height: 10vh !important;
+    }
+  }
+  h2 {
+    margin-top: 3vh;
+  }
+}
+
+
+/*=====  End of CREATE FORM  ======*/

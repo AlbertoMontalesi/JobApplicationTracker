@@ -32,6 +32,7 @@ gem 'jquery-rails'
 gem 'materialize-sass'
 gem 'slim-rails'
 gem 'devise'
+gem "autoprefixer-rails"
 # gem "font-awesome-rails"
 gem 'jquery-turbolinks'
 gem 'ransack', github: 'activerecord-hackery/ransack'

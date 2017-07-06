@@ -1,0 +1,24 @@
+
+/*=============================================
+=            SEARCH FORMS            =
+=============================================*/
+
+#search-forms {
+  @media #{$medium-and-down} {
+    .col {
+      margin-bottom: 2vh;
+    }
+    * {
+      font-size: 3.5rem !important;
+    }
+  } // end breakpoint
+  .btn {
+    padding: 2% 4% !important;
+    box-sizing: border-box;
+    width: auto;
+    height: auto;
+  }
+}
+
+
+/*=====  End of SEARCH FORMS  ======*/
