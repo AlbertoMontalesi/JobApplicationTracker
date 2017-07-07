@@ -68,11 +68,11 @@ html {
 =            GENERAL
 =============================================*/
 
-.container:not(footer.container) {
+.container:not(.page-footer) {
   position: relative;
   height: auto;
   @media #{$medium-and-down} {
-    min-height: 85vh; // to have the login and signup big buttons almost at the botto of the page
+    min-height: 85vh; // to have the login and signup big buttons almost at the bottom of the page
   }
 }
 
