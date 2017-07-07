@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
+  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?('/')
   "https://github.com/#{repo_name}.git"
 end
 
@@ -30,16 +30,16 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development*
 gem 'jquery-rails'
 gem 'materialize-sass'
-gem 'slim-rails'
+gem 'slim-rails'  
 gem 'devise'
-gem "autoprefixer-rails"
+gem 'autoprefixer-rails'
 # gem "font-awesome-rails"
 gem 'jquery-turbolinks'
 gem 'ransack', github: 'activerecord-hackery/ransack'
 gem 'serviceworker-rails'
 gem 'will_paginate', '~> 3.1.0'
 group :development, :test do
-# Call 'byebug' anywhere in the code to stop execution and get a debugger console*
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console*
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver*
   gem 'capybara', '~> 2.13'
