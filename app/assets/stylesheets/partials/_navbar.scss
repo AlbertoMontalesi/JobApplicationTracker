@@ -8,6 +8,7 @@
   @media #{$medium-and-down} {
     // styles for small screens and down
     display: flex;
+    align-content: center;
     align-items: center;
   }
 }
